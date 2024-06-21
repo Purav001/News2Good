@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import "./Navbar.css"
-const Navbar = () => {
+const Navbar = ({setCategory}) => {
 
-
+  const [isActive, setIsActive] = useState(false);
+  const handleClick = () => {
+    setIsActive(!isActive);
+  };
 
 
   return (
@@ -16,13 +19,25 @@ const Navbar = () => {
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
       <ul className="navbar-nav me-auto mb-2 mb-lg-0">
         <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
+          <div className="nav-link " onClick={()=>setCategory("general")}>General</div>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
+          <div className="nav-link " onClick={()=>setCategory("technology")}>Technology</div>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">News</a>
+          <div className="nav-link" onClick={()=>setCategory("business")}>Business</div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link" onClick={()=>setCategory("health")}>Health</div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link" onClick={()=>setCategory("science")}>Science</div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link" onClick={()=>setCategory("sports")}>Sports</div>
+        </li>
+        <li className="nav-item">
+          <div className="nav-link" onClick={()=>setCategory("entertainment")}>Entertainment</div>
         </li>
    
       </ul>
