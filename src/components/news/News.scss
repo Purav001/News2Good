@@ -5,10 +5,23 @@ $color-primary-white: rgb(255, 255, 255);
 .mainDiv {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  font-family: 'Roboto', sans-serif;
+}
+.main {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 50px;
   font-family: 'Roboto', sans-serif;
+}
+.center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .card {
@@ -21,7 +34,6 @@ $color-primary-white: rgb(255, 255, 255);
   color: $color-primary-white;
   margin-top: 2rem;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
-  
   // height: 400px;
   // width: 350px;
  
@@ -53,7 +65,9 @@ $color-primary-white: rgb(255, 255, 255);
   .overlay:hover{
     background-color: rgba(0, 0, 0, 0.5);
   }
-
+  .wr{
+    word-wrap: break-word;
+  }
   h2 {
     position: absolute;
     inset: auto auto 30px 30px;
@@ -134,4 +148,18 @@ $color-primary-white: rgb(255, 255, 255);
       height: 420px;
       width: 330px;
   }
+}
+.button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #0056b3;
 }
