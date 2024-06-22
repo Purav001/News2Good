@@ -3,12 +3,14 @@ import Navbar from './components/navbar/Navbar'
 import News from './components/news/News'
 
 const App = () => {
-  const [category,setCategory] = useState("general");
+  const [category, setCategory] = useState('general');
+  const [searchTerm, setSearchTerm] = useState('');
+
   return (
-    <>
-      <Navbar setCategory={setCategory}/>
-      <News category={category}/>
-    </>
+    <div className="App">
+      <Navbar setCategory={setCategory} setSearchTerm={setSearchTerm} />
+      <News category={category} searchTerm={searchTerm} />
+    </div>
   )
 }
 
