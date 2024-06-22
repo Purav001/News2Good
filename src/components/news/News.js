@@ -29,7 +29,7 @@ const News = ({category}) => {
               <img src={ele.urlToImage}  alt="" />
               <div className="overlay"></div>
               </div>
-              <div class="card-content">
+              <div class="card-content overlay">
                 <h2>
                 {ele.author == "" ? "Janelle Ash" : ele.author}
                 </h2>
